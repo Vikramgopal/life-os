@@ -1,26 +1,102 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Background */
+  --bg1: #07111f;
+  --bg2: #0b1728;
+  --bg3: #101f33;
+  --bg4: #15263d;
+
+  /* Borders */
+  --border1: #1b3049;
+  --border2: #26415e;
+  --border3: #31516f;
+
+  /* Text */
+  --text-primary: #eef6ff;
+  --text-secondary: #c9d8e8;
+  --text-muted: #9bb0c5;
+  --text-subtle: #71879d;
+
+  /* Primary */
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --primary-active: #1d4ed8;
+
+  /* Status */
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --info: #38bdf8;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --color-bg1: var(--bg1);
+  --color-bg2: var(--bg2);
+  --color-bg3: var(--bg3);
+  --color-bg4: var(--bg4);
+
+  --color-border1: var(--border1);
+  --color-border2: var(--border2);
+  --color-border3: var(--border3);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-text-subtle: var(--text-subtle);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-active: var(--primary-active);
+
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-info: var(--info);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.my-component {
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* Small devices */
+@media (min-width: 640px) {
+  .my-component {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Medium devices */
+@media (min-width: 768px) {
+  .my-component {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+}
+
+/* Large devices */
+@media (min-width: 1024px) {
+  .my-component {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+/* Extra large devices */
+@media (min-width: 1280px) {
+  .my-component {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+/* 2XL devices */
+@media (min-width: 1536px) {
+  .my-component {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
 }
